@@ -10,6 +10,186 @@
 
 </div>
 
+<div align="center">
+  <a href="#overview">English</a> |
+  <a href="#обзор">Русский</a>
+</div>
+
+---
+
+## Overview
+
+NewsPulseBot is a professional Telegram bot that provides users with up-to-date news from various categories using NewsAPI. The bot is developed using modern Python development approaches, including asynchronous programming, modular architecture, and user preferences storage.
+
+![NewsPulseBot Demo](https://via.placeholder.com/800x450.png?text=NewsPulseBot+Demo)
+
+## ✨ Key Features
+
+- 🔄 **Real-time News Updates** - get the latest news from your selected category
+- 🔍 **Category Support** - news sorted by categories (business, technology, sports, etc.)
+- 💾 **Preferences Storage** - remembers preferred categories for each user
+- 🛠 **Modular Architecture** - easily maintainable and extensible code
+- 📊 **Comprehensive Logging** - detailed tracking of bot operations
+- 🔐 **Secure Key Storage** - using environment variables for confidential data
+
+## 🚀 Bot Commands
+
+| Command | Description |
+|---------|-------------|
+| `/start` | Begin working with the bot and receive a welcome message |
+| `/news` | Get the latest news (considering user's preferred category) |
+| `/latest [category]` | Get the latest news in the specified category |
+
+## 🏗️ Project Architecture
+
+```
+NewsPulseBot/
+│
+├── src/                     # Source code
+│   ├── handlers/            # Command and message handlers
+│   │   ├── __init__.py
+│   │   └── commands.py      # Bot command handlers
+│   │
+│   ├── utils/               # Utility modules
+│   │   ├── __init__.py
+│   │   ├── logger.py        # Logging configuration
+│   │   └── news_api.py      # News API interaction
+│   │
+│   ├── database/            # Database operations
+│   │   ├── __init__.py
+│   │   └── db.py            # SQLite handler class
+│   │
+│   ├── __init__.py
+│   └── bot.py               # Main bot module
+│
+├── data/                    # Data storage directory
+│   └── newspulsebot.db      # SQLite database (created automatically)
+│
+├── logs/                    # Logs storage directory
+│
+├── .env.example             # Example environment variables file
+├── .env                     # Environment variables file (not stored in repository)
+├── requirements.txt         # Project dependencies
+├── main.py                  # Entry point
+└── README.md                # Project documentation
+```
+
+## 🛠️ Technology Stack
+
+- **Python 3.9+**: Main programming language
+- **python-telegram-bot 20.0+**: Library for Telegram Bot API
+- **aiohttp**: Asynchronous HTTP client for API requests
+- **SQLite**: Lightweight database for user data storage
+- **NewsAPI**: API for news retrieval
+- **python-dotenv**: Environment variables loader
+- **loguru**: Advanced logging
+- **pydantic**: Data validation
+
+## 💻 Installation and Launch
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/username/NewsPulseBot.git
+cd NewsPulseBot
+```
+
+2. **Install dependencies:**
+
+```bash
+pip install -r requirements.txt
+```
+
+3. **Create and configure .env file:**
+
+```bash
+cp .env.example .env
+# Edit .env file, adding your Telegram Bot token and NewsAPI key
+```
+
+4. **Run the bot:**
+
+```bash
+python main.py
+```
+
+## 📝 Environment Variables Configuration
+
+Create a `.env` file in the project root with the following variables:
+
+```env
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+NEWS_API_KEY=your_news_api_key
+LOG_LEVEL=INFO  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+```
+
+## 🧩 Usage Examples
+
+### Getting Latest News
+
+```
+/news
+```
+
+Result:
+```
+📰 Latest headlines:
+
+1. [News Headline 1](https://link-to-news1.com)
+   🗞️ News Source
+   📝 Brief news description...
+
+2. [News Headline 2](https://link-to-news2.com)
+   🗞️ News Source
+   📝 Brief news description...
+```
+
+### Getting News by Category
+
+```
+/latest technology
+```
+
+Result:
+```
+📰 Latest news in 'Technology' category:
+
+1. [Technology News Headline 1](https://link-to-tech-news1.com)
+   🗞️ News Source
+   📝 Brief technology news description...
+
+2. [Technology News Headline 2](https://link-to-tech-news2.com)
+   🗞️ News Source
+   📝 Brief technology news description...
+```
+
+## 🔄 Future Development Prospects
+
+- **Multilingual Support**: Add ability to receive news in different languages
+- **Personalized Feed**: Algorithm for news selection based on user interests
+- **Advanced Search**: Search for news by keywords and phrases
+- **Notification Scheduler**: Setup for regular notifications about important news
+- **Integration with Other Services**: Connect additional news sources
+- **Usage Statistics**: Analytics for tracking popular categories and queries
+
+## 📜 License
+
+This project is distributed under the MIT license. Detailed information can be found in the LICENSE file.
+
+## 📞 Contacts
+
+- **Developer**: [Your Name](https://github.com/username)
+- **Email**: your.email@example.com
+- **Telegram**: [@your_telegram_username](https://t.me/your_telegram_username)
+
+---
+
+<div align="center">
+  <sub>Created with ❤️ to showcase programming skills</sub>
+</div>
+
+---
+
 ## 📋 Обзор
 
 NewsPulseBot - это профессиональный Telegram бот, который предоставляет пользователям актуальные новости из разных категорий с использованием NewsAPI. Бот разработан с применением современных подходов к разработке на Python, включая асинхронное программирование, модульную архитектуру и хранение пользовательских настроек.
@@ -171,12 +351,12 @@ LOG_LEVEL=INFO  # DEBUG, INFO, WARNING, ERROR, CRITICAL
 
 ## 📞 Контакты
 
-- **Разработчик**: [Вадим]
-- **Email**: vadimkapro0123@gmail.com
-- **Telegram**: [@CodeX_developer](https://t.me/your_telegram_username)
+- **Разработчик**: [Ваше Имя](https://github.com/username)
+- **Email**: your.email@example.com
+- **Telegram**: [@your_telegram_username](https://t.me/your_telegram_username)
 
 ---
 
 <div align="center">
-  <sub>Создано с ❤️ для улучшения доступа к актуальной информации</sub>
+  <sub>Создано с ❤️ для демонстрации навыков программирования</sub>
 </div> 
